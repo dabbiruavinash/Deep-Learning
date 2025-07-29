@@ -1,0 +1,59 @@
+Artificial Neural Networks (ANNs), Convolutional Neural Networks (CNNs), and Recurrent Neural Networks (RNNs) are fundamental architectures in deep learning, each suited for different types of data and tasks. Let's explore them in detail:
+
+1. Artificial Neural Network (ANN)
+Basic Idea: ANNs are the foundation of deep learning, inspired by biological neurons. They consist of input, hidden, and output layers with interconnected nodes (neurons).
+
+Structure:
+Fully Connected (Dense): Every neuron in one layer connects to every neuron in the next.
+Activation Functions: ReLU, Sigmoid, or Tanh introduce non-linearity.
+
+Use Cases:
+Tabular data (e.g., sales prediction).
+Classification/Regression tasks where data has no spatial or sequential structure.
+
+Limitations:
+Poor performance on image, text, or time-series data due to lack of spatial/sequential modeling.
+Prone to overfitting with high-dimensional data.
+
+2. Convolutional Neural Network (CNN)
+Basic Idea: CNNs are designed for grid-like data (e.g., images, videos) using convolutional layers to detect spatial hierarchies (edges → shapes → objects).
+
+Key Components:
+Convolutional Layers: Apply filters (kernels) to detect local patterns.
+Pooling Layers (Max/Average): Reduce spatial dimensions (downsampling).
+Flatten Layer: Converts 2D/3D features to 1D for dense layers.
+Fully Connected Layers: Final classification (e.g., Softmax for image labels).
+
+Advantages:
+Parameter Sharing: Filters reduce parameters compared to dense layers.
+Translation Invariance: Detects patterns regardless of position.
+
+Use Cases:
+Image classification (ResNet, VGG).
+Object detection (YOLO, Faster R-CNN).
+Medical imaging, self-driving cars.
+
+Example:
+Input Image → Conv → ReLU → Pooling → Conv → ReLU → Pooling → Flatten → Dense → Output
+
+3. Recurrent Neural Network (RNN)
+Basic Idea: RNNs process sequential data (time series, text, speech) by maintaining a hidden state (memory) of previous inputs.
+
+Key Features:
+Recurrent Connections: Hidden state passes information across time steps.
+Handles Variable-Length Inputs: Unlike fixed-size ANNs/CNNs.
+
+Problems with Vanilla RNNs:
+Vanishing/Exploding Gradients: Struggles with long sequences (e.g., paragraphs).
+
+Improved Variants:
+LSTM (Long Short-Term Memory): Uses gates (input, forget, output) to control memory.
+GRU (Gated Recurrent Unit): Simpler than LSTM with fewer gates.
+
+Use Cases:
+Text generation (e.g., GPT uses transformers, but earlier models used RNNs).
+Machine translation (Google Translate used RNNs before transformers).
+Time-series forecasting (stock prices, weather).
+
+Example:
+Input Sequence → RNN/LSTM Cell → Hidden State → Output (e.g., next word)
